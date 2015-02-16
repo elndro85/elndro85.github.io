@@ -1,0 +1,63 @@
+
+$fontIcons: 'FontAwesome';
+//$fontFamily: 'Roboto', sans-serif;
+$fontFamily: 'Open Sans', sans-serif;
+$fontWeightRegular:100;
+$fontWeightBold:300;
+
+$fontSizeSmall:14px;
+$fontSizeRegular:18px;
+$fontSizeBig:22px;
+$fontMini: 10px;
+
+//colores del texto
+$textColor: $grayLight;
+$headColor: $gray;
+
+
+
+//colores de marca -- tema azul
+$primaryColor: $blue;
+$secondaryColor: $blueLight;
+$accentColor:$orange;
+$contrastColor: $fucsia;
+
+
+//colores de marca -- tema amarillo
+//$primaryColor: #242021;
+//$secondaryColor: lighten(#242021,5%);
+//$accentColor:#ffdc4e;
+//$contrastColor: #ffcd00;
+
+//colores users
+$userBackground: lighten($accentColor,10%);
+$userBorder: darken($userBackground, 10%);
+
+//colores de acciones
+$actionColor: $accentColor; $actionTextColor: $white; // esta es la combinacion de colores
+$secondaryActionColor:$secondaryColor; $secondaryActionTextColor: lighten($secondaryColor,20%);
+$defaultActionColor: $gray; $defaultActionTextColor: lighten($grayLight,20%);
+
+
+$backgroundColor: #fdfdfd;
+
+//colores de los headings
+$boxHeading: #fafafa;
+$boxHeadingText: $gray;
+
+$mainPadding: 12px;
+$mainMargin: 12px;
+$biggerMargin:25px;
+
+$heightPadding: 12px;
+$widthPadding: 25px;
+
+$border: 2px;
+$border-radius: 2px;
+
+//tamanos de las imagenes
+$companyRegular: 60px;
+$companyBig: $companyRegular*2;
+$companySmall: ($companyRegular / 2);
+$brandImage: 30px;
+$userImage: 40px;

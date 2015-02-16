@@ -1,0 +1,39 @@
+body>header{
+	
+	position: relative;
+	@include normalizar;
+	@include box-shadow(rgba(0, 0, 0, 0.227451) 0px 3px 10px 0px);
+
+	nav {
+		display: block;
+		text-align: center;
+		ul li{
+			display: inline-block;
+			margin-top: $mainMargin;
+
+			a{
+				color: $textColor;
+			}
+		}
+	}
+
+	>a{
+		position: absolute;
+		top: $mainMargin;
+		right: $mainMargin;
+		margin-top: $mainMargin;
+	}
+
+	i{
+		float: left;
+		margin: $mainMargin;
+	}
+
+	i:before{
+		font-size: $companyRegular;
+	}
+
+	div{
+		padding: $mainPadding;
+	}
+}

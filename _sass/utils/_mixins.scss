@@ -1,0 +1,62 @@
+@mixin breakpoint-min($minimo){
+	@media screen and (min-width: $minimo){
+		@content;
+	}
+}
+
+@mixin breakpoint-max($maximo){
+	@media screen and (max-width: $maximo){
+		@content;
+	}
+}
+
+@mixin breakpoint-between($minimo, $maximo){
+	@media screen and (min-width: $minimo) and (max-width: $maximo){
+		@content;
+	}
+}
+
+@mixin normalizar(){
+	clear: both;
+	&:before, &:after{
+		content: " ";
+		clear: both;
+		display: block;
+	}
+}
+
+//placeholders 
+
+%shadowMaterial{
+	@include box-shadow(rgba(0, 0, 0, 0.227451) 0px 3px 10px 0px, rgba(0, 0, 0, 0.156863) 0px 3px 10px 0px);
+};
+
+%insetMaterial{
+	@include box-shadow(inset rgba(0, 0, 0, 0.227451) 0px 1px 5px 0px);
+};
+
+%animation {
+	@include transition(0.6s ease background-color);
+}
+
+%dropDown {
+	display:none;
+	position: absolute;
+    background: $white;
+    @include border-radius($border-radius);
+    @extend %shadowMaterial;
+    z-index: 1000;
+
+    li {
+      display: block;
+      border: none;
+      &:hover {
+        background: $secondaryColor;
+        color: $secondaryActionTextColor;
+        @extend %animation;
+        & a, & a:visited{
+        	color: $white;
+        }
+      }
+    }
+}

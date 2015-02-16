@@ -1,0 +1,26 @@
+table{
+	border-collapse: collapse;
+	margin: $mainMargin $biggerMargin;
+	tr:nth-child(odd) {
+		td{
+			background: lighten($boxHeading,0%);
+		}
+	}
+
+	th{
+		background: lighten($defaultActionTextColor,25%);
+		font-style: bolder;
+		font-weight: $fontWeightBold;
+		padding: $mainPadding;
+		text-align: center;
+	}
+
+	td{	
+		padding: $mainPadding;
+		font-weight: $fontWeightRegular;
+		text-align: center;
+		img{
+			@include border-radius(50%);
+		}
+	}
+}

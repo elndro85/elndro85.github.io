@@ -1,0 +1,38 @@
+$grid-width: 100%;
+$columns: 6;
+
+@for $i from 1 through $columns {
+	@for $k from 1 through $i{
+		  .grid-#{$k}-#{$i}{
+			width: ($grid-width/$i)*$k;
+		  }
+	}
+}
+
+.grid-row {
+	@include normalizar;
+
+	> div {
+		padding-top: $mainMargin;
+		padding-left: $mainMargin;
+		float:left;
+
+		&:last-of-type {
+			padding-right: $mainMargin;
+		}
+	}
+}
+
+.grid-nopadding {
+	padding: 0 !important;
+}
+
+.grid-row-blank {
+	@include normalizar;
+	height: 100px;
+}
+
+.grid-center {
+	margin-left: auto;
+	margin-right: auto;
+}

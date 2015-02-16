@@ -1,0 +1,180 @@
+.box-resources{
+	div{
+		margin: $mainMargin;
+
+		p{
+			font-size: $fontSizeSmall;
+		}
+	}
+}
+
+.box-feature{
+		text-align: center;
+		i{
+			font-size: $companyRegular;
+			margin: $mainMargin;
+			color: $actionColor;
+		}
+		p{
+			font-size: $fontSizeSmall;
+		}
+}
+
+.box-quote{
+		
+	div{
+		float: left;
+		display: inline-block;
+		text-align: center;
+	}
+
+	div:first-child{
+		width: 20%;
+		img{
+			@include border-radius(50%);
+			width: $companyBig;
+			height: $companyBig;
+		}
+	}
+
+	div:last-child{
+		width: 80%;
+		blockquote{
+			margin: $mainMargin;
+
+			p:before{
+				content: "\f10d";
+			}
+
+			p:after{
+				content: "\f10e";
+			}
+
+			p:before, p:after{
+				font-family: $fontIcons;
+				color: $actionColor;
+				font-size: $fontSizeBig;
+				margin: $mainMargin;
+			}
+
+			cite{
+				font-size: $fontSizeSmall;
+			}
+		}
+	}
+
+	& + div{
+		margin: $mainMargin;
+		img{
+			@include border-radius(50%);
+			margin: $widthPadding;
+
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.box-casos{
+	.grid-row{
+		div{
+			margin: $biggerMargin*2;
+			img{
+				width: 400px;
+				height: 250px;
+				display: block;
+				float: right;
+			}
+
+			div{
+				margin-top: 50px;
+				text-align: center;
+				margin: $biggerMargin*3;
+				float: left;
+				width: 50%;
+				//margin: 70px 0;
+				p{
+					
+					padding: 0;
+					width: 90%;
+					text-align: justify;
+
+				}
+
+				#{headings()}{
+					margin-bottom: $mainMargin;
+				}
+			}
+
+		}
+	}
+
+}
+
+.box-casos.box-casos-centered{
+	& .grid-row:nth-child(odd){
+		>div{
+			>img{
+				float: right;
+			}
+		}		
+	}
+}
+
+
+.box-feature-extended{
+	margin: $mainMargin;
+	h2{
+		margin-bottom: $mainMargin;
+	}
+
+	img{
+		width: 250px;
+		height: 150px;
+		float: left;
+	}
+
+	div{
+		margin: 0 $mainMargin;
+		float: left;
+		width: 55%;
+		padding:0;
+		p{
+			padding:0;
+		}
+	}
+}
+
+.box-partners{
+	text-align: center;
+	h2,p{
+		margin-bottom: $biggerMargin;
+	}
+
+	img{
+		width: 200px;
+		height: 100px;
+		margin: $biggerMargin;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+
+.box-about{
+	text-align: center;
+	
+	img:first-child{
+		margin-bottom: $biggerMargin;
+	}
+
+	h2{
+		margin-bottom: $mainMargin;
+	}
+
+	img:last-child{
+		width: 300px;
+		height: 300px;
+	}
+}

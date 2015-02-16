@@ -1,0 +1,54 @@
+@include font-face("minerva", font-files("minerva.woff", "minerva.ttf", "minerva.svg"), "minerva.eot");
+
+.icon-minerva:before { 
+	font-family: "minerva";
+	content: '\e800'; 
+}
+
+a{
+	text-decoration: none;
+	color:$actionColor;
+	cursor: pointer;
+
+	&:hover{
+		color: $actionColor; //falta cambiar el hover de los links
+	}
+	&:visited{
+		color: $actionColor;
+		&:hover {
+			color: $actionColor;
+		}
+	}
+}
+
+strong,b{
+	font-weight: $fontWeightBold;
+}
+
+em,i{
+	font-style: italic;
+}
+
+mark{
+	background-color: $blueLight;
+}
+
+section p {
+	padding: 0 $widthPadding;
+}
+
+.text-center {
+	text-align: center;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    color: $white;
+    background: $actionColor;
+}
+
+::selection {
+    text-shadow: none;
+    color: $white;
+    background: $actionColor;
+}

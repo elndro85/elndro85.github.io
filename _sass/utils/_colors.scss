@@ -1,0 +1,40 @@
+//Colores
+$blue: #193345;
+$blueLight: lighten($blue,5%);
+$blueDark: darken($blue,20%);
+
+$celeste:saturate(lighten($blueLight, 36), 31);
+
+$gray: #5D5F61;
+$grayLight: lighten($gray,10%);
+
+$green: #66bb6a;
+$greenlight: lighten($green,20%);
+
+$red: #ef5350;
+$redLight: lighten($red,10%);
+
+$yellow: #FFEB3B;
+$yellowLight: lighten($yellow,20%);
+
+$black: #000;
+$white: #fff;
+
+$fucsia: #FF4081;
+
+
+
+//colores de los gráficos
+$graphColor1: #1abc9c;
+$graphColor2: #f1c40f;
+$graphColor3: #2ecc71;
+$graphColor4: #e67e22;
+$graphColor5: #3498db;
+$graphColor6: #e74c3c;
+
+
+//colores de la pagina
+
+$orange: #ffa33d;
+
+$blueLight: #739cd9;

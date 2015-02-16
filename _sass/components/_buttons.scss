@@ -1,0 +1,51 @@
+button, .btn {
+	padding: $heightPadding $widthPadding;
+	margin: $mainMargin $mainMargin/2;
+	background-color: $defaultActionTextColor;
+	color: $white;
+	cursor: pointer;
+	border:none;
+	border-radius: $border-radius;
+	font-family: $fontFamily;
+	font-weight:$fontWeightRegular;
+	font-weight: 300;
+
+	&:hover{
+		padding:($heightPadding - $border) ($widthPadding - $border);
+		border: $border solid $defaultActionColor;
+		background-color: transparent;
+		color: $defaultActionColor;
+		@extend %animation;
+	}
+}
+
+
+.btn-ghost{
+	background-color: transparent;
+	border: 2px solid $white;
+	color: white;
+	&:hover{
+		padding: $heightPadding $widthPadding;
+		color:$white;
+		background-color:white;
+		border: 2px solid $white;
+	}
+}
+
+.btn-graph{
+	width:100%;
+	display: inline-block;
+	padding: $widthPadding 0;
+	margin: $mainMargin 0;
+	text-align: center;
+	font-size: $fontSizeBig;
+	border: 1px solid $defaultActionTextColor;
+	color: $grayLight;
+	&:hover{
+		background-color: $defaultActionTextColor;
+		color: $white;
+		@extend %animation;
+		border-color: $defaultActionTextColor;
+	}
+}
+

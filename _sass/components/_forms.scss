@@ -1,0 +1,216 @@
+label {
+    position:relative;
+    padding-top: 20px;
+    display: inline-block;
+    margin: 0 $mainMargin;
+}
+
+input[type="text"],input[type="email"],input[type="password"],input[type="number"],input[type="tel"],textarea{
+  padding:$mainPadding;
+  border:none;
+  border-bottom:1px solid $gray;
+  outline: none;
+  background-color: transparent;
+
+  &:focus {
+    outline:none;
+    @include transition(0.4s ease all);
+    @include box-shadow(inset $accentColor 0 -1px 0 0);
+    border-color: $accentColor;
+  }
+
+  &:focus + span, label.used & + span{
+    top:5px;
+    font-size:$fontSizeSmall;
+    color:$accentColor;
+    @include transition(0.6s ease all);
+  }
+
+   & + span{
+      display: block;
+      color:$textColor; 
+      position:absolute;
+      pointer-events:none;
+      left:5px;
+      top:32px;
+    }
+
+  &:focus:invalid{
+    @include box-shadow(inset $red 0 -1px 0 0);
+    border-bottom:1px solid $red;
+    outline: none;
+    & + span{
+      color: $red;
+    }
+  }
+
+  &:-moz-submit-invalid, &:-moz-ui-invalid{
+    @include box-shadow(none);
+  }
+}
+
+input[type="number"]{
+    text-align: center;
+}
+
+input[type="radio"] {
+    display:none;
+    
+    & + span{
+        margin-right:$mainMargin;
+        &:before{
+            content: " ";
+            display:inline-block;
+            width:13px;
+            height:13px;
+            margin: 0 $mainMargin;
+            vertical-align:middle;
+            cursor:pointer;
+            @include border-radius(50%);
+            border: 1px solid $grayLight;
+            background-color:transparent;
+            @include transition(background-color 0.5s ease-out);
+        }
+    }
+
+    &:checked + span:before{
+        background-color: $accentColor;
+        border-color: $accentColor;
+    }
+
+}
+
+input[type="checkbox"]{
+    display: none;
+    
+    & + span{
+        margin: 0 ($mainMargin*3);
+    }
+
+    & + span:before{
+        top: 23px;
+        content: " ";
+        margin: 0    $mainMargin;
+        display: inline;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid $grayLight;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    &:checked + span:before{
+        content: " ";
+        @include transform(rotate(-45deg));
+        height: .5rem;
+        border-color: $accentColor;
+        border-top-style: none;
+        border-right-style: none;
+    }
+
+}
+
+input[type="file"] {
+  position: relative;
+  display: none;
+
+  & + span{
+    
+  }
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+label.file{
+    @include border-radius($border-radius*2);
+    margin: $mainMargin+10px;
+    position: relative;
+    overflow: hidden;
+    height: ($companyBig - 20px);
+    width: ($companyBig - 20px);
+    text-align: center;
+    border: 2px dotted darken($boxHeading,8%);
+
+    &:hover{
+        cursor: pointer;
+        background-color: darken($boxHeading,8%);
+        color: $white;
+        &:after{
+            right: 28px;
+            font-size: 48px;
+            @include transition(0.6s ease font-size);
+            color: $white;
+        }
+    }
+
+    &:after{
+        top: 0;
+        right: 32px;
+        position: absolute;
+        @include text-shadow(0px 1px 20px rgba(0, 0, 0, 0.0));
+        color: rgb(213, 213, 213);
+        content: "\f016";
+        font-family: $fontIcons;
+        line-height: $companyBig - 20px;
+        font-size: 32px;
+    }
+}
+
+select{
+  position: relative;
+  overflow: hidden;
+  @include appearance(none);
+  padding: 0 $widthPadding;
+  left: -10000px;
+}
+
+label.select {
+  
+  display: inline-block;
+  margin: 0 $mainMargin;
+
+
+  ul {
+    top: 65px;
+    left: 0;
+    @extend %dropDown;
+  }
+  span {
+    position:absolute;
+    top: 28px;
+    left: 0;
+    padding: 0 $widthPadding+10 $heightPadding/2 0;
+    display:block;
+    border-bottom:1px solid $gray;
+
+    &:after{
+      content: "\f0d7";
+      font-family: $fontIcons;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+    }
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:hover span:after {
+      top: 10px;
+      @include transition(all 0.3s ease-in-out);
+  }
+}
+
+.row-form {
+  padding: $mainPadding;
+
+  label:first-of-type{
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,54 @@
+section.hero{
+	background-color: #4AC279;
+	text-align: center;
+	height: 100vh;
+	//
+
+	div {
+		@extend %centrado-vertical;
+
+		h1,h3{
+		color: white;
+		}
+
+		h1{
+			font-weight: 200;
+			font-size: 62px;
+		}
+
+		h3{
+			font-size: 20px;
+		}
+
+		a{
+			color: white;
+
+			&:hover{
+				color: #4AC279;
+			}
+		}
+	}
+
+	
+}
+
+section.contact{
+	height: 60vh;
+	background: url(imgs/geometry.png) repeat;
+	text-align: center;
+	div{
+		@extend %centrado-vertical;
+
+		h2{
+			font-size: 62px;
+			font-weight: 200;
+		}
+
+		h4{
+			font-size: 20px;
+			span{
+				font-size: inherit;
+			}
+		}
+	}
+}

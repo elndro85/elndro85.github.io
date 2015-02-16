@@ -1,0 +1,18 @@
+.menu-fixed-top{
+	display: block;
+	text-align: center;
+
+	ul li{
+		display: inline-block;
+		img{
+			width: 100px;
+			height: 80px;
+			@include filter(grayscale(100%));
+
+			&:hover{
+				cursor: pointer;
+				@include filter(grayscale(0%));
+			}
+		}
+	}
+}

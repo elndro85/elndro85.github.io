@@ -1,0 +1,10 @@
+#{headings()}{
+	color: $headColor;
+	font-weight:500;
+}
+
+@for $h from 1 through 6 {
+  h#{$h}{
+	font-size: (6px/6)*(7-$h)+32;
+  }
+}
